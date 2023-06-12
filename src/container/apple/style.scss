@@ -47,7 +47,7 @@
     //color: s.color('fontDark');
 }
 
-.product_discription {
+.product_description {
     font-size: 20px;
 }
 
@@ -87,10 +87,23 @@
     }
 }
 
+.product-small {
+    max-height: 500px;
+    height: 100vh;
+
+    background-size: cover;
+
+    @media all and (width < s.screen('tablet')) {
+        background-size: 150%;
+
+        max-height: 500px;
+    }
+}
+
 .product--dark {
 
     .product_title,
-    .product_discription {
+    .product_description {
         color: s.color('background');
         background-color: #000;
     }
@@ -113,7 +126,7 @@
 .product--light {
 
     .product_title,
-    .product_discription {
+    .product_description {
         color: s.color('fontDark');
         background-color: #fafafa;
     }
@@ -122,7 +135,7 @@
 $productImage: (
     'iphone-pro' '/img/iphone_pro.png' #000,
     'iphone' '/img/iphone.png' #fafafa,
-    'trade_in' '/img/trade_in.png' #FBFBFD,
+    'trade-in' '/img/trade_in.png' #FBFBFD,
     'conference' '/img/conference.png' #000,
 );
 
