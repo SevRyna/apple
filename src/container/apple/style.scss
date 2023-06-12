@@ -34,34 +34,30 @@
     font-size: s.size('small');
 }
 
-.ad {
+.header_ad {
     @extend .section;
 
     background-color: s.color('backgroundWhite');
 }
 
-.ad_content {
-    @extend .ad_content;
+.header_ad_content {
+    @extend .header_ad_content;
 
     display: flex;
     padding: s.space(4) 0;
     justify-content: space-between;
 }
 
-.ad_block {
+.header_ad_block {
     display: flex;
     gap: s.space(8);
     align-items: center;
 }
 
-.ad_link {
+.header_ad_link {
     color: s.color('primary');
 
     @include s.click;
-}
-
-.ad_link {
-    font-size: s.size('small');
 }
 
 .product_content {
