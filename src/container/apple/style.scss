@@ -34,6 +34,36 @@
     font-size: s.size('small');
 }
 
+.ad {
+    @extend .section;
+
+    background-color: s.color('backgroundWhite');
+}
+
+.ad_content {
+    @extend .ad_content;
+
+    display: flex;
+    padding: s.space(4) 0;
+    justify-content: space-between;
+}
+
+.ad_block {
+    display: flex;
+    gap: s.space(8);
+    align-items: center;
+}
+
+.ad_link {
+    color: s.color('primary');
+
+    @include s.click;
+}
+
+.ad_link {
+    font-size: s.size('small');
+}
+
 .product_content {
     display: grid;
     gap: s.space(5);
@@ -67,7 +97,7 @@
 .product {
     @extend .section;
 
-    padding-top: s.space(20);
+    padding-top: s.space(10);
     padding-bottom: s.space(20);
 
     background-repeat: no-repeat;
@@ -128,22 +158,26 @@
     .product_title,
     .product_description {
         color: s.color('fontDark');
-        background-color: #fafafa;
+        //background-color: #fafafa;
     }
 }
 
 $productImage: (
     'iphone-pro' '/img/iphone_pro.png' #000,
     'iphone' '/img/iphone.png' #fafafa,
+    'iwatch' '/img/iwatch.png' #000,
     'trade-in' '/img/trade_in.png' #FBFBFD,
     'conference' '/img/conference.png' #000,
+    'Ipad' '/img/ipad.png' #FBFBFD,
+    'small_business' '/img/small_business.png' #000,
+    'gift' '/img/gift.png' #FBFBFD,
+    'card' '/img/card.png' #FBFBFD,
 );
-
 
 @each $class,
 $url,
 $color in $productImage {
-    .product--#{class} {
+    .product--#{$class} {
         background-image: url(#{$url});
         background-color: $color;
     }
@@ -157,4 +191,44 @@ $color in $productImage {
     .product_description {
         font-size: 20px;
     }
+}
+
+.product--bottom1 {
+    .product_content {
+        align-content: flex-start;
+    }
+}
+
+.product--top1 {
+    .product_content {
+        align-content: flex-start;
+        top: 50px;
+
+    }
+}
+
+.footer {
+    @extend .section;
+
+    background-color: s.color('backgroundblue');
+}
+
+.footer_content {
+    @extend .section_content;
+
+    display: grid;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 39px 0px 39px 0px;
+}
+
+.footer_block {
+    display: grid;
+    gap: s.space(10);
+}
+
+.footer_links {
+    color: s.color('backgroundDark');
+
+    @include s.click;
 }

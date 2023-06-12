@@ -119,7 +119,7 @@ router.get('/apple', function (req, res) {
       },
     },
     card: {
-      title: 'card',
+      title: 'Card',
       descriptions:
         'Get up to 3% Daily Cash back with every purchase.',
       link: {
@@ -164,7 +164,7 @@ router.get('/apple', function (req, res) {
             url: '#CertifiedRefurbished',
             text: 'Certified Refurbished',
           },
-          { url: '#AppleTradeIn', text: 'Apple Trade In' },
+          { url: '#AppleTradeIn', text: 'Appbluele Trade In' },
         ],
       },
       {

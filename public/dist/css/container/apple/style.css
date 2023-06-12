@@ -2,33 +2,33 @@
   align-content: flex-start;
 }
 
-.section, .header, .product {
+.section, .header, .ad, .product, .footer {
   display: flex;
   justify-content: center;
   padding: 0 16px;
 }
 
-.section_content, .header_content {
+.section_content, .header_content, .footer_content {
   max-width: 1200px;
   width: 100%;
 }
 @media all and (width < 1440px) {
-  .section_content, .header_content {
+  .section_content, .header_content, .footer_content {
     max-width: 1100px;
   }
 }
 @media all and (width < 1260px) {
-  .section_content, .header_content {
+  .section_content, .header_content, .footer_content {
     max-width: 900px;
   }
 }
 @media all and (width < 1000px) {
-  .section_content, .header_content {
+  .section_content, .header_content, .footer_content {
     max-width: 700px;
   }
 }
 @media all and (width < 620px) {
-  .section_content, .header_content {
+  .section_content, .header_content, .footer_content {
     max-width: 500px;
   }
 }
@@ -86,6 +86,38 @@
   font-size: 12px;
 }
 
+.ad {
+  background-color: #FFFFFF;
+}
+
+.ad_content {
+  display: flex;
+  padding: 16px 0;
+  justify-content: space-between;
+}
+
+.ad_block {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.ad_link {
+  color: #0066CC;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.ad_link:hover {
+  opacity: 0.7;
+}
+.ad_link:active {
+  opacity: 0.3;
+}
+
+.ad_link {
+  font-size: 12px;
+}
+
 .product_content {
   display: grid;
   gap: 20px;
@@ -134,7 +166,7 @@
 }
 
 .product {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 80px;
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -181,27 +213,51 @@
 .product--light .product_title,
 .product--light .product_description {
   color: #1D1D1F;
-  background-color: #fafafa;
 }
 
-.product--class {
+.product--iphone-pro {
   background-image: url(/img/iphone_pro.png);
   background-color: #000;
 }
 
-.product--class {
+.product--iphone {
   background-image: url(/img/iphone.png);
   background-color: #fafafa;
 }
 
-.product--class {
+.product--iwatch {
+  background-image: url(/img/iwatch.png);
+  background-color: #000;
+}
+
+.product--trade-in {
   background-image: url(/img/trade_in.png);
   background-color: #FBFBFD;
 }
 
-.product--class {
+.product--conference {
   background-image: url(/img/conference.png);
   background-color: #000;
+}
+
+.product--Ipad {
+  background-image: url(/img/ipad.png);
+  background-color: #FBFBFD;
+}
+
+.product--small_business {
+  background-image: url(/img/small_business.png);
+  background-color: #000;
+}
+
+.product--gift {
+  background-image: url(/img/gift.png);
+  background-color: #FBFBFD;
+}
+
+.product--card {
+  background-image: url(/img/card.png);
+  background-color: #FBFBFD;
 }
 
 .product-small .product_title {
@@ -209,6 +265,43 @@
 }
 .product-small .product_description {
   font-size: 20px;
+}
+
+.product--bottom1 .product_content {
+  align-content: flex-start;
+}
+
+.product--top1 .product_content {
+  align-content: flex-start;
+  top: 50px;
+}
+
+.footer {
+  background-color: #d9d9d9;
+}
+
+.footer_content {
+  display: grid;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 39px 0px 39px 0px;
+}
+
+.footer_block {
+  display: grid;
+  gap: 40px;
+}
+
+.footer_links {
+  color: #454545;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.footer_links:hover {
+  opacity: 0.7;
+}
+.footer_links:active {
+  opacity: 0.3;
 }
 
 /*# sourceMappingURL=style.css.map */
